@@ -4,23 +4,30 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app-container'>
+      <form className='note-form'>
+        <input 
+        type="text"
+        placeholder='title'
+        required />
+        <textarea 
+        placeholder='Input text here...'
+        required
+         rows={10}
+         ></textarea>
+         <button type='submit'>Save Document</button>
+      </form>
+      <div className='notes-grid'>
+        <div className='note-item'>
+          <div className='notes-header'>
+            <button>Delete Document</button>
+          </div>
+          <h2>Document Title</h2>
+          <p>Document content</p>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
